@@ -3,6 +3,7 @@
 
 char* getRandomWord(FILE *file)
 {
+    //Opens file from the file pointer.
     file = fopen("WordsForLingo.txt","r");
     if(file == NULL)
     {
@@ -11,17 +12,17 @@ char* getRandomWord(FILE *file)
 		exit(0);
         return;
     }
-	
+	//Get lines from text file
 	int wordIncrement = 0;
 	char wordArray[256][7];
 	char line[7];
 	while(fgets(line, 7, file) != NULL)
     {
-	    //printf ("%s", line);
 		if(line[0] != '\n')
 	    {strcpy(&wordArray[wordIncrement],&line);
 	    ++wordIncrement;}
     }
+    //Closes file.
 	fclose(file);
 	
 	//RANDOMIZE A WORD TO USE FOR LINGO

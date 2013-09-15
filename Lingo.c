@@ -48,7 +48,7 @@ void StartLingo(const char word[])
 			printf("\nThe word %s has been guessed!\n", word);
 			break;
 		}
-		//delete[] inputWord;
+		
 		remainingTries--;
 	}
 	
