@@ -6,10 +6,10 @@ int main()
     //Creates File pointer
 	FILE *file;
 	//The word that will be guessed will be stored here
-	char* wordArray;
+	char chosenWord[10];
 	//Reads the text file and gets a random word
-	wordArray = getRandomWord(&file);
+	getRandomWord(&file,&chosenWord);
 	//Starts the lingo game with a random word as a input
-	StartLingo(wordArray);
+	StartLingo(chosenWord);
 	return 0;
 }

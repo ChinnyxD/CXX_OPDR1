@@ -5,5 +5,5 @@
 *@param word[] The word that will be guessed
 */
 
-void StartLingo(const char word[]);
+void StartLingo(char *word);
 

@@ -1,6 +1,6 @@
 #include "Lingo.h"
 
-void StartLingo(const char word[])
+void StartLingo(char * word)
 {	
     //Starting Lingo
 	int array[6];
@@ -33,6 +33,7 @@ void StartLingo(const char word[])
 		printf("\nInput: ");
 		gets(inputWord);
 		
+		
 		//CHECK IF CHARACTERS ARE CORRECT
 		int j = 0;
 		for(j=0;j<6;j++)
@@ -45,7 +46,8 @@ void StartLingo(const char word[])
 		
 		if(strcmp(word, inputWord ) == 0)
 		{
-			printf("\nThe word %s has been guessed!\n", word);
+			printf("\nThe word %s has been guessed! Press enter to exit!\n", word);
+			getchar();
 			break;
 		}
 		
@@ -54,7 +56,8 @@ void StartLingo(const char word[])
 	
 	if (remainingTries == 0)
 	{
-		printf("\nGame over.\n");
+		printf("\nGame over. Press enter to exit!\n");
+		getchar();
 	}
 }
 

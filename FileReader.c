@@ -1,7 +1,7 @@
 #include "FileReader.h"
 
 
-char* getRandomWord(FILE *file)
+void getRandomWord(FILE *file,char* chosenWord)
 {
     //Opens file from the file pointer.
     file = fopen("WordsForLingo.txt","r");
@@ -28,6 +28,6 @@ char* getRandomWord(FILE *file)
 	//RANDOMIZE A WORD TO USE FOR LINGO
     srand(time(NULL));
     int gen = rand() % wordIncrement;
-	
-	return wordArray[gen];
+	strcpy(chosenWord,wordArray[gen]);
+	//return wordArray[gen];
 }
