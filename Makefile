@@ -1,8 +1,15 @@
-.PHONY: clean All
+SOURCES = main.c Lingo.c FileReader.c
 
-All:
-	@echo "----------Building project:[ Lingov2 - Debug ]----------"
-	@$(MAKE) -f  "Lingov2.mk"
+TARGET = Lingo
+
+CC = gcc
+
+all: lingo
+
+lingo: $(SOURCES) $(TARGET)
+	$(CC) $(SOURCES) -o $(TARGET) 
+
 clean:
-	@echo "----------Cleaning project:[ Lingov2 - Debug ]----------"
-	@$(MAKE) -f  "Lingov2.mk" clean
+	rm -rf $(TARGET) 
+
+
